@@ -1,0 +1,38 @@
+{
+  "name": "millionjs",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "src/index.js",
+  "dependencies": {
+    "@reejs/imports": "^2.2.26",
+    "@reejs/react": "^0.10.31",
+    "@reejs/server": "^0.10.31",
+    "million": "^2.5.2",
+    "react": "file:./.reejs/deps/react",
+    "react-dom": "file:./.reejs/deps/react-dom",
+    "render": "file:./.reejs/deps/render",
+    "@hono/serve-static": "file:./.reejs/deps/@hono/serve-static",
+    "debug": "file:./.reejs/deps/debug",
+    "@twind/core": "file:./.reejs/deps/@twind/core",
+    "@twind/preset-autoprefix": "file:./.reejs/deps/@twind/preset-autoprefix",
+    "@twind/preset-tailwind": "file:./.reejs/deps/@twind/preset-tailwind",
+    "@twind/preset-typography": "file:./.reejs/deps/@twind/preset-typography",
+    "@twind/with-react": "file:./.reejs/deps/@twind/with-react",
+    "@hono/node-server": "file:./.reejs/deps/@hono/node-server",
+    "hono": "file:./.reejs/deps/hono",
+    "@headlessui/react": "file:./.reejs/deps/@headlessui/react",
+    "slugify": "file:./.reejs/deps/slugify",
+    "react-router-dom": "file:./.reejs/deps/react-router-dom",
+    "react-lag-radar": "file:./.reejs/deps/react-lag-radar",
+    "@tanstack/react-virtual": "file:./.reejs/deps/@tanstack/react-virtual",
+    "preact": "file:./.reejs/deps/preact"
+  },
+  "scripts": {
+    "postinstall": "reejs i && reejs sync",
+    "start": "node packit/index.js",
+    "build": "rm -rf packit && npm run packit && npm run packit",
+    "packit": "DEBUG=\"r\" PSC_DISABLE=\"r\" reejs packit node",
+    "dev": "reejs packit node -d"
+  },
+  "license": "MIT"
+}
